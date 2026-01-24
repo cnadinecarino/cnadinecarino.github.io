@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ESSENCE | Login</title>
+<link rel="stylesheet" href="style.css">
+<script src="script.js" defer></script>
+</head>
+
+<body>
+
+<header>
+    <h1>ESSENCE</h1>
+    <p>User Login</p>
+</header>
+
+<main>
+    <div class="auth-wrapper">
+
+        <!-- LEFT IMAGE -->
+        <div class="auth-left">
+            <img src="bg3.jpg" alt="Login Background">
+            <div class="auth-text">
+                <h2>Welcome Back</h2>
+                <p>Experience luxury<br>with ESSENCE</p>
+            </div>
+        </div>
+
+        <!-- RIGHT FORM -->
+        <div class="auth-right">
+            <div class="luxury-box">
+                <h2 class="section-title">Login</h2>
+
+                <form onsubmit="return validateLogin();">
+                    <input type="email" id="loginEmail" placeholder="Email Address" required>
+                    <input type="password" id="loginPassword" placeholder="Password" required>
+                    <button type="submit">Login</button>
+                </form>
+
+                <p class="switch">
+                    Don’t have an account?
+                    <a href="signup.html">Sign up</a>
+                </p>
+            </div>
+        </div>
+
+    </div>
+</main>
+
+<footer>
+    <p>© 2026 ESSENCE</p>
+    <p>Email: essence@gmail.com | Phone: 0912-345-6789</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ESSENCE | Payment & Delivery</title>
+<link rel="stylesheet" href="style.css">
+<script src="script.js" defer></script>
+</head>
+ 
+<body>
+ 
+<header>
+    <h1>ESSENCE</h1>
+    <p>Payment & Delivery</p>
+</header>
+ 
+<div class="container">
+    <nav>
+        <a href="home.html">Home</a>
+        <a href="profile.html">Profile</a>
+        <a href="confirmation.html">Transaction</a>
+    </nav>
+ 
+    <main>
+        <div class="page-center">
+            <div class="luxury-box">
+                <h2 class="section-title">Choose Payment & Delivery</h2>
+ 
+                <form onsubmit="return saveOrderDetails();">
+ 
+                    <h3>Payment Method</h3>
+                    <label>
+                        <input type="radio" name="payment" value="Cash on Delivery" required>
+                        Cash on Delivery
+                    </label><br>
+ 
+                    <label>
+                        <input type="radio" name="payment" value="GCash">
+                        GCash
+                    </label><br>
+ 
+                    <label>
+                        <input type="radio" name="payment" value="Credit / Debit Card">
+                        Credit / Debit Card
+                    </label><br><br>
+ 
+                    <h3>Delivery Option</h3>
+                    <select id="delivery" required>
+                        <option value="">Select Delivery Option</option>
+                        <option value="Standard Delivery (3-5 days)">Standard Delivery (3-5 days)</option>
+                        <option value="Express Delivery (1-2 days)">Express Delivery (1-2 days)</option>
+                    </select>
+ 
+                    <br><br>
+                    <button type="submit">Confirm Order</button>
+ 
+                </form>
+            </div>
+        </div>
+    </main>
+</div>
+ 
+<footer>
+    <p>© 2026 ESSENCE</p>
+    <p>Email: essence@gmail.com | Phone: 0912-345-6789</p>
+</footer>
+ 
+</body>
+</html>
+ 

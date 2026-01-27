@@ -27,35 +27,47 @@ function validateSignup() {
     return false;
 }
 
-function saveOrderDetails(event) {
-    event.preventDefault();
- 
-    const paymentMethod =
-        document.querySelector('input[name="payment"]:checked')?.value;
- 
-    const deliveryOption =
-        document.getElementById("delivery")?.value;
- 
-    if (!paymentMethod || !deliveryOption) {
-        alert("Please select both payment and delivery options.");
-        return;
-    }
- 
-    localStorage.setItem("paymentMethod", paymentMethod);
-    localStorage.setItem("deliveryOption", deliveryOption);
-    localStorage.setItem("orderStatus", "Confirmed");
- 
-    window.location.assign("confirmation.html");
+/*using optional chaining*/
+function addToCart() {
+    showCartBanner();
 }
- 
-document.addEventListener("DOMContentLoaded", () => {
-    document.getElementById("payment")?.textContent =
-        localStorage.getItem("paymentMethod") ?? "N/A";
- 
-    document.getElementById("delivery")?.textContent =
-        localStorage.getItem("deliveryOption") ?? "N/A";
- 
-    document.getElementById("status")?.textContent =
-        localStorage.getItem("orderStatus") ?? "Pending";
-});
- 
+
+function showCartBanner() {
+    const banner = document.getElementById("cart-banner")?.classList;
+
+    banner?.add("show");
+
+    setTimeout(() => {
+        banner?.remove("show");
+    }, 2000);
+}
+
+
+function toggleMenu() {
+    document.getElementById("side-nav")?.classList.toggle("show");
+}
+
+
+let selectedPayment = "";
+
+function selectPayment(method) {
+    selectedPayment = method;
+    alert(method + " selected");
+}
+
+function validateOrder() {
+    let delivery = document.getElementById("delivery").value;
+
+    if (!selectedPayment) {
+        alert("Please select a payment method!");
+        return false; 
+    }
+    if (!delivery) {
+        alert("Please select a delivery option!");
+        return false; 
+    }
+
+    return true;
+}
+
+

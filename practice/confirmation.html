@@ -7,41 +7,45 @@
 <link rel="stylesheet" href="style.css">
 <script src="script.js" defer></script>
 </head>
- 
+
 <body>
- 
+
 <header>
     <h1>ESSENCE</h1>
     <p>Transaction Confirmation</p>
 </header>
- 
+
 <div class="container">
-    <nav>
-        <a href="home.html">Home</a>
-        <a href="profile.html">Profile</a>
-    </nav>
- 
     <main>
         <div class="page-center">
-            <div class="luxury-box">
+            <div class="luxury-box cart-box">
                 <h2 class="section-title">E-Receipt</h2>
- 
-                <p><strong>Payment Method:</strong> <span id="payment"></span></p>
-                <p><strong>Delivery Option:</strong> <span id="delivery"></span></p>
-                <p><strong>Status:</strong> <span id="status"></span></p>
- 
-                <br>
-                <p>Thank you for shopping with ESSENCE. Your order has been successfully placed.</p>
+
+                <p><strong>Payment Method:</strong> Cash on Delivery</p>
+                <p><strong>Delivery Option:</strong> Express Delivery (1-2 days)</p>
+                <p><strong>Status:</strong> Confirmed</p>
+
+                <h3>Order Summary</h3>
+                <ul class="cart-items">
+                    <li class="cart-item">Chanel No.5 - <span class="price">$299</span></li>
+                    <li class="cart-item">YSL Libre - <span class="price">$169</span></li>
+                    <li class="cart-item">Dior Sauvage - <span class="price">$199</span></li>
+                </ul>
+
+                <h3 class="cart-total">Total: <span class="total-price">$667</span></h3>
+
+                <p style="text-align:center; margin-top:20px;">Thank you for shopping with <strong>ESSENCE</strong>. Your order has been successfully placed.</p>
+
+                <a href="home.html" class="checkout-btn">Back to Home</a>
             </div>
         </div>
     </main>
 </div>
- 
+
 <footer>
     <p>© 2026 ESSENCE</p>
     <p>Email: essence@gmail.com | Phone: 0912-345-6789</p>
 </footer>
- 
+
 </body>
 </html>
- 
